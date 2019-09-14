@@ -6,6 +6,15 @@
 #include <inttypes.h>
 
 
+
+#ifdef DEBUG
+#define ZLL_PRINTF(fmt,...) printf(fmt, ##__VA_ARGS__)
+#else
+#define ZLL_PRINTF(fmt,...) /* */
+#endif
+
+
+
 typedef struct {
   
   struct {
