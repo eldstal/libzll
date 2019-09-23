@@ -79,6 +79,10 @@ PROFILE_CFLAGS  = -g -O3 -pg
 
 WERROR = -Werror
 WARN_OPTIONS = -W -Wall -Wpointer-arith -Wcast-align -std=gnu99 -Wno-format-zero-length  -Wno-format-zero-length -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -Wno-unused-but-set-variable
+
+# Additional warnings with newer GCC
+WARN_OPTIONS += -Wno-unused-local-typedefs -Wno-unused-value
+
 WARN_OPTIONS_CXX = -W -Wall -Wpointer-arith -Wcast-align -pedantic
 
 CFLAGS_BUILD_CFG = $(DEBUG_CFLAGS)
